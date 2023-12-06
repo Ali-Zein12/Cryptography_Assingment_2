@@ -6,3 +6,11 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tfhe = { version = "*", features = ["boolean", "shortint", "integer"] }
+
+[features]
+default = ["shortint", "integer"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-pc-windows-msvc"]
+features = ["rdseed"]
